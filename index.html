@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHero-tube</title>
 
     <!-- daisy ui link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="container mx-auto">
-
+  <body class="container mx-auto">
     <head>
-        <header>
-            <!-- nav section -->
-            <section class="mt-10">
-                <div>
-                    <div class="flex flex-col md:flex-row items-center space-y-4 justify-between">
-                        <div>
-                            <img class="w-[100px] h-[40px]" src="./img/Logo.png" alt="">
-                        </div>
-                        <div>
-                            <button id="sort-view" class="px-5 py-2 bg-gray-200 text-lg rounded font-medium">Sort by
-                                view</button>
-                        </div>
-                        <div>
-                            <button class="px-5 py-2 rounded text-white text-lg bg-[#FF1F3D] font-medium">Blog</button>
-                        </div>
-                    </div>
-                    <hr class="mt-10 border-gray-300 border-2">
-                </div>
-            </section>
-        </header>
+      <header>
+        <!-- nav section -->
+        <section class="mt-10">
+          <div>
+            <div
+              class="flex flex-col justify-between items-center space-y-4 md:flex-row">
+              <div>
+                <img class="w-[100px] h-[40px]" src="./img/Logo.png" alt="" />
+              </div>
+              <div>
+                <button
+                  id="sort-button"
+                  class="px-5 py-2 text-lg font-medium bg-gray-200 rounded">
+                  Sort by view
+                </button>
+              </div>
+              <div>
+                <button
+                  class="px-5 py-2 rounded text-white text-lg bg-[#FF1F3D] font-medium">
+                  Blog
+                </button>
+              </div>
+            </div>
+            <hr class="mt-10 border-2 border-gray-300" />
+          </div>
+        </section>
+      </header>
 
-        <main>
-            <!-- tab section --> 
-            <section class="mt-8">
-                <div id="tab-container" class="text-center flex flex-col md:flex-row justify-center gap-5">
+      <main>
+        <!-- tab section -->
+        <section class="mt-8">
+          <div
+            id="tab-container"
+            class="flex flex-col gap-5 justify-center text-center md:flex-row"></div>
+        </section>
 
-                </div>
-            </section>
+        <!-- result section -->
+        <section class="mt-10">
+          <div
+            id="card-container"
+            class="grid grid-cols-1 gap-6 place-items-center md:grid-cols-3 lg:grid-cols-4"></div>
+        </section>
 
-            <!-- result section -->
-            <section class="mt-10">
-                <div id="card-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-6">
+        <section id="null-card"></section>
+      </main>
 
-                </div>
-            </section>
-
-            <section id="null-card">
-               
-            </section>
-
-        </main>
-
-
-        <!-- scripts file -->
-        <script src="js/index.js"></script>
+      <!-- scripts file -->
+      <script src="js/index.js"></script>
     </head>
-</body>
-
+  </body>
 </html>
