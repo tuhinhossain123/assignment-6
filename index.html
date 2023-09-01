@@ -15,36 +15,45 @@
 
     <head>
         <header>
+            <!-- nav section -->
             <section class="mt-10">
                 <div>
-                    <div class="flex justify-between">
+                    <div class="flex flex-col md:flex-row items-center space-y-4 justify-between">
                         <div>
                             <img class="w-[100px] h-[40px]" src="./img/Logo.png" alt="">
                         </div>
                         <div>
-                            <button class="px-5 py-2 bg-gray-200 text-lg rounded font-medium">Sort by view</button>
+                            <button id="sort-view" class="px-5 py-2 bg-gray-200 text-lg rounded font-medium">Sort by
+                                view</button>
                         </div>
                         <div>
                             <button class="px-5 py-2 rounded text-white text-lg bg-[#FF1F3D] font-medium">Blog</button>
                         </div>
                     </div>
-                    <hr class="mt-10 bg-slate-600 font-extrabold">
+                    <hr class="mt-10 border-gray-300 border-2">
                 </div>
             </section>
         </header>
 
         <main>
+            <!-- tab section --> 
             <section class="mt-8">
-                <div id="tab-container" class="text-center flex justify-center gap-5">
-                    <!-- <button class="bg-gray-200 px-5 py-2 rounded font-semibold">show</button> -->
+                <div id="tab-container" class="text-center flex flex-col md:flex-row justify-center gap-5">
+
                 </div>
             </section>
 
+            <!-- result section -->
             <section class="mt-10">
-                <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div id="card-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-6">
 
                 </div>
             </section>
+
+            <section id="null-card">
+               
+            </section>
+
         </main>
 
 
