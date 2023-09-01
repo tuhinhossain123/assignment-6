@@ -48,9 +48,11 @@ const loadCategory = async () => {
       const div = document.createElement('div');
       console.log(card);
       div.innerHTML = `
-          <figure><img class="w-[312px] h-[200px] rounded" src="${
+          <figure class="relative"><img class="w-[312px] h-[200px] rounded" src="${
             card?.thumbnail
-          }" alt="" /><p class="px-3 py-1.5 w-max text-sm text-white bg-black bg-opacity-50 rounded-md -translate-x-6 -translate-y-10 ms-auto">${
+          }" alt="" /><p class="${
+        card.others.posted_date ? 'block' : 'hidden'
+      } px-3 py-1.5 w-max text-sm text-white bg-black bg-opacity-50 rounded-md absolute bottom-2 right-2">${
         card.others.posted_date ? formatTime(card.others.posted_date) : ''
       }</p></figure>
           <div class="mt-5">
@@ -95,12 +97,14 @@ const loadCategory = async () => {
         sortedData.forEach((card) => {
           const div = document.createElement('div');
           div.innerHTML = `
-              <figure><img class="w-[312px] h-[200px] rounded" src="${
+              <figure class="relative"><img class="w-[312px] h-[200px] rounded" src="${
                 card?.thumbnail
               }" alt="" />
-              <p class="px-3 py-1.5 w-max text-sm text-white bg-black bg-opacity-50 rounded-md -translate-x-6 -translate-y-10 ms-auto">${
-                card.others.posted_date ? formatTime(card.others.posted_date) : ''
-              }</p>
+              <p class="${
+                card.others.posted_date ? 'block' : 'hidden'
+              } px-3 py-1.5 w-max text-sm text-white bg-black bg-opacity-50 rounded-md absolute bottom-2 right-2">${
+            card.others.posted_date ? formatTime(card.others.posted_date) : ''
+          }</p>
               </figure>
               <div class="mt-5">
                   <div class="flex gap-x-4 items-center">
