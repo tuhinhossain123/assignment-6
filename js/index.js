@@ -17,7 +17,7 @@ const formatTime = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
 
-  return `${hours}hrs ${minutes}min`;
+  return `${hours}hrs ${minutes}min ago`;
 };
 
 const handleLoadCard = async (categoryId) => {
