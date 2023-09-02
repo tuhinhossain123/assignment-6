@@ -133,7 +133,8 @@ const loadCategory = async () => {
                   </div>
               </div>
               <p class="pl-14 text-gray-400">${card?.others?.views} views</p>
-          </div >`;
+          </div >
+          `;
   
           cardContainer.appendChild(div);
         });
